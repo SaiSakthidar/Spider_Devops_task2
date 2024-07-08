@@ -1,6 +1,7 @@
 
 services:
   user:
+    image: saisakthidarsr/user-service:latest
     build:
       context: ./user-service
       dockerfile: Dockerfile.user
@@ -15,6 +16,7 @@ services:
       - "host.docker.internal:host-gateway"
 
   product:
+    image: saisakthidarsr/product-service:latest
     build:
       context: ./product-service
       dockerfile: Dockerfile.product
@@ -29,6 +31,7 @@ services:
       - "host.docker.internal:host-gateway"
 
   order:
+    image: saisakthidarsr/order-service:latest
     build:
       context: ./order-service
       dockerfile: Dockerfile.order
