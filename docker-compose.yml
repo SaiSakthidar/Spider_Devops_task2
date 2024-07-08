@@ -1,0 +1,43 @@
+
+services:
+  user:
+    build:
+      context: ./user-service
+      dockerfile: Dockerfile.user
+    ports:
+      - "3001:3001"
+    environment:
+      NODE_ENV: production
+    dns:
+      - "8.8.8.8"
+      - "8.8.4.4"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  product:
+    build:
+      context: ./product-service
+      dockerfile: Dockerfile.product
+    ports:
+      - "3002:3002"
+    environment:
+      NODE_ENV: production
+    dns:
+      - "8.8.8.8"
+      - "8.8.4.4"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  order:
+    build:
+      context: ./order-service
+      dockerfile: Dockerfile.order
+    ports:
+      - "3003:3003"
+    environment:
+      NODE_ENV: production
+    dns:
+      - "8.8.8.8"
+      - "8.8.4.4"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
