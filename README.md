@@ -1,4 +1,3 @@
-Basic Microservices for Online Shopping Platform
 # SETUP
 Clone the repo and run 
 ``
