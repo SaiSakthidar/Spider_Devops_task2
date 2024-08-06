@@ -1,4 +1,5 @@
 # SETUP
+new test push
 Clone the repo and run 
 ``
 bash deploy.sh
